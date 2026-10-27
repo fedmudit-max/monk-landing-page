@@ -183,6 +183,83 @@ section[id] { scroll-margin-top: calc(var(--header) + 12px); }
 
 .hero-phone { order: -1; }
 
+.hero-phone {
+  position: relative;
+  width: min(74%, 270px);
+  margin: 0 auto;
+  padding: 10px 8px 12px;
+  border-radius: 42px;
+  background: linear-gradient(180deg, #3c3c42 0%, #161618 12%, #0b0b0d 55%, #1a1a1d 100%);
+  box-shadow:
+    0 28px 70px rgba(0, 0, 0, 0.45),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.28),
+    inset 0 0 0 3px #050505;
+}
+
+.hero-phone::before,
+.hero-phone::after {
+  content: "";
+  position: absolute;
+  background: #2a2a2e;
+}
+
+.hero-phone::before {
+  left: -3px;
+  top: 104px;
+  width: 3px;
+  height: 22px;
+  border-radius: 2px 0 0 2px;
+  box-shadow: 0 36px 0 #2a2a2e, 0 68px 0 #2a2a2e;
+}
+
+.hero-phone::after {
+  right: -3px;
+  top: 156px;
+  width: 3px;
+  height: 72px;
+  border-radius: 0 2px 2px 0;
+}
+
+.hero-screen {
+  position: relative;
+  overflow: hidden;
+  border-radius: 34px;
+  background: #f2f2f7;
+  padding: 28px 0 16px;
+}
+
+.hero-screen::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 9px;
+  left: 50%;
+  width: 84px;
+  height: 16px;
+  transform: translateX(-50%);
+  background: #0b0b0d;
+  border-radius: 12px;
+}
+
+.hero-screen::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  width: 34%;
+  height: 4px;
+  transform: translateX(-50%);
+  background: rgba(20, 20, 24, 0.28);
+  border-radius: 4px;
+}
+
+.hero-screen img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+
 .hero h1 {
   font-size: clamp(36px, 5vw, 56px);
   font-weight: 900;
@@ -272,28 +349,6 @@ section[id] { scroll-margin-top: calc(var(--header) + 12px); }
 
 .btn-secondary:hover { color: #fff; }
 
-.hero-stats {
-  display: flex;
-  gap: 28px;
-  margin-top: 48px;
-  flex-wrap: wrap;
-}
-
-.hero-stat-num {
-  font-size: 28px;
-  font-weight: 800;
-  color: #fff;
-  letter-spacing: -1px;
-  line-height: 1;
-}
-
-.hero-stat-label {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.55);
-  font-weight: 500;
-  margin-top: 4px;
-}
-
 .phone {
   position: relative;
   width: min(100%, 280px);
@@ -323,44 +378,96 @@ section[id] { scroll-margin-top: calc(var(--header) + 12px); }
   border-radius: 24px;
 }
 
-.hero .phone {
-  margin: 0 auto;
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4), 0 0 0 8px rgba(255, 255, 255, 0.08);
-}
 
 .green-bg .phone {
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
 }
 
-.problem {
+.works {
   background: var(--grey-bg);
   padding: 80px 24px;
 }
 
-.problem-inner {
-  max-width: 720px;
+.works-inner {
+  max-width: 960px;
   margin: 0 auto;
-  text-align: center;
 }
 
-.problem-quote {
-  font-size: clamp(22px, 3vw, 30px);
-  font-weight: 800;
-  line-height: 1.35;
-  letter-spacing: -0.4px;
-  margin-bottom: 16px;
+.works .section-h2 {
+  max-width: 16ch;
+  margin-bottom: 40px;
 }
 
-.problem-quote em {
-  font-style: normal;
-  color: var(--green-brand);
+.works-grid {
+  display: grid;
+  gap: 28px;
+  align-items: center;
 }
 
-.problem-sub {
-  font-size: 16px;
-  color: var(--grey-text);
-  line-height: 1.65;
+.works-steps {
+  list-style: none;
   margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.works-steps li {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 14px;
+  align-items: start;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px 18px;
+}
+
+.works-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--green-deep);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+}
+
+.works-steps p {
+  margin: 6px 0 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--black);
+}
+
+.works-why {
+  margin-top: 22px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 4px 18px 2px;
+}
+
+.works-why summary {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 14px 0;
+  color: var(--green-deep);
+}
+
+.works-why p {
+  margin: 0 0 14px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--grey-text);
+}
+
+.works-why p:last-child {
+  color: var(--black);
+  font-weight: 700;
 }
 
 .paths { background: #fff; padding: 96px 24px; }
@@ -935,7 +1042,8 @@ summary {
     grid-template-columns: 1.1fr 0.9fr;
     gap: 64px;
   }
-  .hero-phone { order: 0; }
+  .hero-phone { order: 0; width: min(100%, 292px); }
+  .works-grid { grid-template-columns: 280px 1fr; gap: 48px; }
   .paths-grid { grid-template-columns: 1fr 1fr; }
   .feature-grid,
   .why-grid { grid-template-columns: 1fr 1fr; }
