@@ -1504,6 +1504,188 @@ a.choice.choice-drank .choice-mark {
 .why { margin-top: 64px; }
 .why .section-sub { margin-bottom: 24px; }
 
+/* —— Section 6: two bands (copy | panel) —— */
+.history-band {
+  display: grid;
+  gap: 28px;
+  align-items: start;
+  width: 100%;
+}
+
+.history-band + .history-band {
+  margin-top: 64px;
+}
+
+.history-band-copy {
+  min-width: 0;
+}
+
+.history .history-header {
+  max-width: none;
+  margin: 0 0 24px;
+  text-align: left;
+}
+
+.history .history-header .section-title {
+  color: var(--dark);
+}
+
+.history .history-header .section-sub {
+  max-width: 36rem;
+}
+
+.history .who-grid {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+}
+
+.why-stack {
+  display: grid;
+  gap: 16px;
+}
+
+.history .feature-card {
+  background: #fff;
+  border: 1px solid rgba(60, 60, 67, 0.06);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.history-band > .app-panel {
+  width: 100%;
+  max-width: 100%;
+}
+
+.app-panel {
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(60, 60, 67, 0.06);
+  padding: 18px 18px 16px;
+  min-width: 0;
+}
+
+.app-panel-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+  min-height: 44px;
+}
+
+.app-panel-titles {
+  min-width: 0;
+}
+
+.app-panel-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1c1c1e;
+  letter-spacing: -0.2px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.app-panel-emoji {
+  font-size: 15px;
+  line-height: 1;
+}
+
+.app-panel-sub {
+  margin: 3px 0 0;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  color: rgba(60, 60, 67, 0.4);
+}
+
+.app-panel-toggle {
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(60, 60, 67, 0.4);
+  padding-top: 2px;
+}
+
+.history-chart {
+  width: 100%;
+  overflow: visible;
+}
+
+.history-chart-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.best-scores-list {
+  list-style: none;
+  margin: 4px 0 6px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.best-scores-row {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px 10px;
+  min-height: 22px;
+}
+
+.best-scores-medal {
+  font-size: 18px;
+  line-height: 1;
+  text-align: center;
+}
+
+.best-scores-bar {
+  display: block;
+  width: var(--bar, 100%);
+  max-width: 100%;
+  height: 16px;
+  min-width: 4px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.best-scores-fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.best-scores-row--1 .best-scores-fill { background: #ff9500; }
+.best-scores-row--2 .best-scores-fill { background: #a8b0b8; }
+.best-scores-row--3 .best-scores-fill {
+  background: linear-gradient(180deg, #e4b48a 0%, #c07842 100%);
+}
+
+.best-scores-value {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: -0.15px;
+  color: rgba(60, 60, 67, 0.55);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  min-width: 4.5em;
+  text-align: right;
+}
+
+.scores-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 /* —— Section 5: drinking risk (copy + phone) —— */
 .risk {
   background: #fff;
@@ -1742,7 +1924,23 @@ a.choice.choice-drank .choice-mark {
   .feature-grid,
   .why-grid { grid-template-columns: 1fr 1fr; }
   .span-2 { grid-column: span 2; }
-  .who-grid { grid-template-columns: repeat(3, 1fr); }
+  .who-grid { grid-template-columns: 1fr; }
+  .history .who-grid { grid-template-columns: 1fr; }
+  .history-band {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .history-band--why {
+    align-items: start;
+  }
+  .history-band > .app-panel {
+    position: sticky;
+    top: calc(var(--header) + 20px);
+  }
+  .scores-panel {
+    justify-content: center;
+  }
   .split { grid-template-columns: 1fr 1fr; }
   .how-steps { grid-template-columns: repeat(3, 1fr); }
   .choice-grid {
@@ -1921,6 +2119,27 @@ a.choice.choice-drank .choice-mark {
   .choices,
   .risk {
     padding: 64px 20px;
+  }
+
+  .history .history-header {
+    margin-bottom: 20px;
+  }
+
+  .history-band {
+    gap: 20px;
+  }
+
+  .history-band + .history-band {
+    margin-top: 48px;
+  }
+
+  .app-panel {
+    padding: 16px 14px 14px;
+    border-radius: 18px;
+  }
+
+  .best-scores-list {
+    gap: 16px;
   }
 
   .risk-inner {

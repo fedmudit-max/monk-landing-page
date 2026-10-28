@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=s5-flat">
+  <link rel="stylesheet" href="style.css?v=s6-bands">
   <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
@@ -125,14 +125,15 @@
           </article>
           <article class="path-card quit">
             <div class="path-icon" aria-hidden="true">🚫</div>
-            <h3 class="path-title">I want to quit.</h3>
-            <p class="path-desc">Build your alcohol-free progress one day at a time.</p>
+            <h3 class="path-title">I want to quit drinking.</h3>
+            <p class="path-desc">You don't have to start with a perfect streak.</p>
             <ul class="path-points">
-              <li>Track your sober streak, from Day 1 onward.</li>
-              <li>Mark milestones as you progress.</li>
-              <li>Explore a timeline of possible changes as alcohol exposure decreases.</li>
+              <li>Log sober days and drinking days honestly.</li>
+              <li>Aim for more sober days than in your previous Journey.</li>
+              <li>Keep improving until you're ready to leave drinking behind.</li>
+              <li>Use the AUDIT-C meter to understand your reported drinking pattern.</li>
             </ul>
-            <p class="path-note">The goal: keep track of your progress, one day at a time.</p>
+            <p class="path-note">The goal: make progress toward quitting, one Journey at a time.</p>
           </article>
         </div>
       </div>
@@ -421,51 +422,152 @@
       </div>
     </section>
 
-    <section class="position" id="who">
+    <section class="position history" id="who">
       <div class="position-inner">
-        <div class="section-header">
-          <h2 class="section-title">For people who feel stuck with alcohol and want a self-driven way back.</h2>
-          <p class="section-sub">10Drinks is for anyone who wants to cut back or stop — whether you drink most days, binge on weekends, or have already tried to quit and slipped. You do not need a perfect first week. You need a score you can improve.</p>
-        </div>
-        <div class="who-grid">
-          <article class="feature-card">
-            <h3 class="feature-title">You want control, not a spectacle</h3>
-            <p class="feature-desc">No leaderboards. No public streak shame. Your Best Score and your last Journey stay with you.</p>
-          </article>
-          <article class="feature-card">
-            <h3 class="feature-title">You can be honest about drinking days</h3>
-            <p class="feature-desc">Logging a drinking day is not failure. It uses one of ten. Honesty is the win — a real score is one you can actually beat.</p>
-          </article>
-          <article class="feature-card">
-            <h3 class="feature-title">You care about the next match</h3>
-            <p class="feature-desc">One hard day does not erase the Journey. Trajectory matters more than any single day.</p>
+        <div class="history-band">
+          <div class="history-band-copy">
+            <div class="section-header history-header">
+              <h2 class="section-title">For people who feel stuck with alcohol and want a self-driven way back.</h2>
+              <p class="section-sub">10Drinks is for anyone who wants to cut back or stop — whether you drink most days, binge on weekends, or have already tried to quit and slipped. You do not need a perfect first week. You need a score you can improve.</p>
+            </div>
+            <div class="who-grid">
+              <article class="feature-card">
+                <h3 class="feature-title">You can be honest about drinking days</h3>
+                <p class="feature-desc">Logging a drinking day is not failure. It uses one of ten. Honesty is the win — a real score is one you can actually beat.</p>
+              </article>
+              <article class="feature-card">
+                <h3 class="feature-title">You care about the next match</h3>
+                <p class="feature-desc">One hard day does not erase the Journey. Trajectory matters more than any single day.</p>
+              </article>
+            </div>
+          </div>
+          <article class="app-panel history-panel" aria-label="History chart">
+            <header class="app-panel-head">
+              <div class="app-panel-titles">
+                <p class="app-panel-title"><span class="app-panel-emoji" aria-hidden="true">📈</span> History</p>
+                <p class="app-panel-sub">Sober days per journey</p>
+              </div>
+              <span class="app-panel-toggle" aria-hidden="true">Hide ▲</span>
+            </header>
+            <div class="history-chart" role="img" aria-label="Sober days per journey: Journey 1 has 5, Journey 2 has 7, Journey 3 has 11, Journey 4 has 15, Journey 5 has 18, Journey 6 has 22.">
+              <svg class="history-chart-svg" viewBox="0 0 400 168" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="historyAreaFill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#34c759" stop-opacity="0.22"/>
+                    <stop offset="100%" stop-color="#34c759" stop-opacity="0"/>
+                  </linearGradient>
+                  <filter id="historyLastGlow" x="-60%" y="-60%" width="220%" height="220%">
+                    <feDropShadow dx="0" dy="0" stdDeviation="3.2" flood-color="#ff9500" flood-opacity="0.55"/>
+                  </filter>
+                </defs>
+                <g class="history-grid" fill="none" stroke="rgba(60,60,67,0.1)" stroke-width="1">
+                  <line x1="36" y1="18" x2="392" y2="18"/>
+                  <line x1="36" y1="46" x2="392" y2="46"/>
+                  <line x1="36" y1="78" x2="392" y2="78"/>
+                  <line x1="36" y1="106" x2="392" y2="106"/>
+                  <line x1="36" y1="138" x2="392" y2="138"/>
+                </g>
+                <g class="history-y" fill="rgba(60,60,67,0.4)" font-size="10" font-family="Inter, system-ui, sans-serif" text-anchor="end">
+                  <text x="30" y="22">30</text>
+                  <text x="30" y="50">23</text>
+                  <text x="30" y="82">15</text>
+                  <text x="30" y="110">8</text>
+                  <text x="30" y="142">0</text>
+                </g>
+                <path d="M48,118 L112,110 L176,94 L240,78 L304,66 L368,50 L368,138 L48,138 Z" fill="url(#historyAreaFill)"/>
+                <path d="M48,118 L112,110 L176,94 L240,78 L304,66 L368,50" fill="none" stroke="#34c759" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <g class="history-points" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">
+                  <g>
+                    <circle cx="48" cy="118" r="5.5" fill="#fff" stroke="#34c759" stroke-width="2.5"/>
+                    <text x="48" y="108" fill="#34c759">5</text>
+                  </g>
+                  <g>
+                    <circle cx="112" cy="110" r="5.5" fill="#fff" stroke="#34c759" stroke-width="2.5"/>
+                    <text x="112" y="100" fill="#34c759">7</text>
+                  </g>
+                  <g>
+                    <circle cx="176" cy="94" r="5.5" fill="#fff" stroke="#34c759" stroke-width="2.5"/>
+                    <text x="176" y="84" fill="#34c759">11</text>
+                  </g>
+                  <g>
+                    <circle cx="240" cy="78" r="5.5" fill="#fff" stroke="#34c759" stroke-width="2.5"/>
+                    <text x="240" y="68" fill="#34c759">15</text>
+                  </g>
+                  <g>
+                    <circle cx="304" cy="66" r="5.5" fill="#fff" stroke="#34c759" stroke-width="2.5"/>
+                    <text x="304" y="56" fill="#34c759">18</text>
+                  </g>
+                  <g filter="url(#historyLastGlow)">
+                    <circle cx="368" cy="50" r="6.5" fill="#fff" stroke="#ff9500" stroke-width="3"/>
+                    <text x="368" y="40" fill="#ff9500">22</text>
+                  </g>
+                </g>
+                <g class="history-x" fill="rgba(60,60,67,0.45)" font-size="11" font-weight="600" font-family="Inter, system-ui, sans-serif" text-anchor="middle">
+                  <text x="48" y="158">J1</text>
+                  <text x="112" y="158">J2</text>
+                  <text x="176" y="158">J3</text>
+                  <text x="240" y="158">J4</text>
+                  <text x="304" y="158">J5</text>
+                  <text x="368" y="158">J6</text>
+                </g>
+              </svg>
+            </div>
           </article>
         </div>
 
-        <div class="why" id="why">
-          <h2 class="section-title">Willpower is easier when the goal is personal and finite.</h2>
-          <p class="section-sub">Open-ended “never drink again” can feel too large. A Journey is bounded: 10 drinking days, then you close the match and start again. You always know the score you are trying to beat — because you built it.</p>
-          <div class="why-grid">
-            <article class="feature-card">
-              <h3 class="feature-title">A previous self-built score</h3>
-              <p class="feature-desc">Your last Journey is the benchmark. Improvement is counted in sober days against the same 10 drinking days, so progress is readable: 7, then 10, then 13.</p>
-            </article>
-            <article class="feature-card">
-              <h3 class="feature-title">Logging honestly is the win</h3>
-              <p class="feature-desc">Each journey is a fresh chance to beat your Best Score. A real score is one you can actually beat. Logging a drinking day uses one of ten. It does not wipe the Journey.</p>
-            </article>
-            <article class="feature-card span-2">
-              <h3 class="feature-title">Five ways a Journey can be a win</h3>
-              <p class="feature-desc">You win here in five ways. Any one of these is a victory. You don’t have to quit. You just have to be slightly better than yesterday.</p>
-              <ul class="wins">
-                <li>Add one more sober day than last time.</li>
-                <li>Don’t increase your intake.</li>
-                <li>Lower your AUDIT-C score by even one point.</li>
-                <li>Beat your personal best.</li>
-                <li>Reach a milestone you haven’t hit before.</li>
-              </ul>
-            </article>
+        <div class="history-band history-band--why" id="why">
+          <div class="history-band-copy">
+            <div class="section-header history-header">
+              <h2 class="section-title">Willpower is easier when the goal is personal and finite.</h2>
+              <p class="section-sub">Open-ended “never drink again” can feel too large. A Journey is bounded: 10 drinking days, then you close the match and start again. You always know the score you are trying to beat — because you built it.</p>
+            </div>
+            <div class="why-stack">
+              <article class="feature-card">
+                <h3 class="feature-title">A previous self-built score</h3>
+                <p class="feature-desc">Your last Journey is the benchmark. Improvement is counted in sober days against the same 10 drinking days, so progress is readable: 7, then 10, then 13.</p>
+              </article>
+              <article class="feature-card">
+                <h3 class="feature-title">Logging honestly is the win</h3>
+                <p class="feature-desc">Each journey is a fresh chance to beat your Best Score. A real score is one you can actually beat. Logging a drinking day uses one of ten. It does not wipe the Journey.</p>
+              </article>
+              <article class="feature-card">
+                <h3 class="feature-title">Five ways a Journey can be a win</h3>
+                <p class="feature-desc">You win here in five ways. Any one of these is a victory. You don’t have to quit. You just have to be slightly better than yesterday.</p>
+                <ul class="wins">
+                  <li>Add one more sober day than last time.</li>
+                  <li>Don’t increase your intake.</li>
+                  <li>Lower your AUDIT-C score by even one point.</li>
+                  <li>Beat your personal best.</li>
+                  <li>Reach a milestone you haven’t hit before.</li>
+                </ul>
+              </article>
+            </div>
           </div>
+          <article class="app-panel scores-panel" aria-label="Best Scores">
+            <header class="app-panel-head">
+              <div class="app-panel-titles">
+                <p class="app-panel-title"><span class="app-panel-emoji" aria-hidden="true">🏅</span> Best Scores</p>
+              </div>
+              <span class="app-panel-toggle" aria-hidden="true">Hide ▲</span>
+            </header>
+            <ul class="best-scores-list" role="list">
+              <li class="best-scores-row best-scores-row--1">
+                <span class="best-scores-medal" aria-hidden="true">🥇</span>
+                <span class="best-scores-bar" style="--bar:100%" aria-hidden="true"><span class="best-scores-fill"></span></span>
+                <span class="best-scores-value">22 days</span>
+              </li>
+              <li class="best-scores-row best-scores-row--2">
+                <span class="best-scores-medal" aria-hidden="true">🥈</span>
+                <span class="best-scores-bar" style="--bar:82%" aria-hidden="true"><span class="best-scores-fill"></span></span>
+                <span class="best-scores-value">18 days</span>
+              </li>
+              <li class="best-scores-row best-scores-row--3">
+                <span class="best-scores-medal" aria-hidden="true">🥉</span>
+                <span class="best-scores-bar" style="--bar:68%" aria-hidden="true"><span class="best-scores-fill"></span></span>
+                <span class="best-scores-value">15 days</span>
+              </li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
