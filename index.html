@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=drank-white">
+  <link rel="stylesheet" href="style.css?v=s5-flat">
   <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
@@ -50,8 +50,10 @@
           </div>
         </div>
         <figure class="hero-phone">
-          <div class="hero-screen">
-            <img src="assets/app-dashboard.png" alt="The 10Drinks dashboard. Day 14. Best Score 25–10, beat 25 to win. Current Journey 10–3: 10 sober days and 3 drinking days. A tray of ten glasses with 7 drinking days left. Buttons for I Did Not Drink Today and I Drank Today.">
+          <div class="progress-device-frame">
+            <div class="progress-screen hero-screen">
+              <img src="assets/app-dashboard.png" alt="The 10Drinks dashboard. Day 14. Best Score 25–10, beat 25 to win. Current Journey 10–3: 10 sober days and 3 drinking days. A tray of ten glasses with 7 drinking days left. Buttons for I Did Not Drink Today and I Drank Today.">
+            </div>
           </div>
         </figure>
       </div>
@@ -86,8 +88,10 @@
             <div>
               <h3>Build Your Sober Score Against 10 Drinking Days</h3>
               <figure class="works-phone">
-                <div class="works-screen">
-                  <img src="assets/app-journey.png" alt="Welcome screen. A Journey is your sober days scored against 10 drinking days. Example: Journey 1 is 10 sober days and 10 drinking days, Journey 2 is 15 and 10, Journey 3 is 20 and 10, Journey 4 is 30 and 10. Goal: more sober days than your last journey." width="770" height="920">
+                <div class="progress-device-frame">
+                  <div class="progress-screen works-screen">
+                    <img src="assets/app-journey.png" alt="Welcome screen. A Journey is your sober days scored against 10 drinking days. Example: Journey 1 is 10 sober days and 10 drinking days, Journey 2 is 15 and 10, Journey 3 is 20 and 10, Journey 4 is 30 and 10. Goal: more sober days than your last journey." width="770" height="920">
+                  </div>
                 </div>
               </figure>
             </div>
@@ -104,162 +108,316 @@
     <section class="paths" id="paths">
       <div class="paths-inner">
         <div class="paths-header">
-          <p class="section-eyebrow">Two journeys. One app.</p>
-          <h2 class="section-h2">Built for both the controller<br>and the quitter.</h2>
-          <p class="section-p">Most alcohol apps force a choice. 10Drinks doesn’t. Use it to cut back on your terms — or use it to stop completely. The app supports both, from Day 1.</p>
+          <p class="section-eyebrow">Two Goals. One App.</p>
+          <h2 class="section-h2">Built for people who want to drink less — or quit.</h2>
         </div>
         <div class="paths-grid">
           <article class="path-card control">
             <div class="path-icon" aria-hidden="true">📉</div>
-            <h3 class="path-title">I want to drink less.<br>Not stop.</h3>
-            <p class="path-desc">You’re aware your drinking has crossed a line. You’re not ready to quit — and you shouldn’t have to. You just want a tool that helps you drink less, without treating every drink as a failure.</p>
+            <h3 class="path-title">I want to drink less.</h3>
+            <p class="path-desc">Cut back without committing to quitting.</p>
             <ul class="path-points">
-              <li>10 drinking days per journey — a drink uses a slot, not your streak</li>
-              <li>Score more sober days each journey — beat your personal best</li>
-              <li>AUDIT-C meter shows exactly which zone you’re in</li>
-              <li>Personalised reduction goal — binge, quantity, or frequency</li>
-              <li>Watch your risk score drop as you improve</li>
+              <li>Track sober days against 10 drinking days per Journey.</li>
+              <li>Set a focus on drinking frequency, quantity, or heavy occasions.</li>
+              <li>Use the AUDIT-C meter to understand your reported drinking pattern.</li>
             </ul>
-            <p class="path-note"><strong>The goal:</strong> More sober days. Fewer drinking days. A lower AUDIT-C score over time. You stay in control — the app just makes the progress visible.</p>
+            <p class="path-note">The goal: more sober days and a clearer picture of your drinking.</p>
           </article>
           <article class="path-card quit">
             <div class="path-icon" aria-hidden="true">🚫</div>
-            <h3 class="path-title">I want to stop.<br>Completely.</h3>
-            <p class="path-desc">You’ve made the decision. You need something that tracks your progress, shows what may be happening in your body, and keeps you going when it gets hard.</p>
+            <h3 class="path-title">I want to quit.</h3>
+            <p class="path-desc">Build your alcohol-free progress one day at a time.</p>
             <ul class="path-points">
-              <li>Day-by-day streak from Day 1 to Day 7 and beyond</li>
-              <li>Science timeline — what may be changing as alcohol exposure decreases</li>
-              <li>Milestone system — 10, 15, 20, 50, 100 sober day achievements</li>
-              <li>Journey chart — your sober days improving over time</li>
-              <li>Clinical risk score that can drop as you stay sober</li>
+              <li>Track your sober streak, from Day 1 onward.</li>
+              <li>Mark milestones as you progress.</li>
+              <li>Explore a timeline of possible changes as alcohol exposure decreases.</li>
             </ul>
-            <p class="path-note">The streak tab names each sober day, and the science timeline describes what may be changing. Timing varies. It is not a promise and not a diagnosis. If withdrawal symptoms are severe or concerning, seek medical help.</p>
+            <p class="path-note">The goal: keep track of your progress, one day at a time.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="features" id="app">
+    <section class="features progress" id="app">
       <div class="features-inner">
-        <div class="section-header">
-          <h2 class="section-title">Streak, milestones, and what your body may be doing.</h2>
-          <p class="section-sub">Three tabs sit under the daily log. Streak counts consecutive sober days. Milestones count sober days in this Journey. Science is a cautious timeline. Changes vary from person to person.</p>
+        <div class="section-header progress-header">
+          <h2 class="section-title">See your progress, day by day.</h2>
+          <p class="section-sub">Track your streak, celebrate milestones, and explore what may change as you spend more days alcohol-free.</p>
         </div>
 
-        <div class="feature-grid">
-          <article class="feature-card green-bg">
-            <p class="feature-eyebrow">The Journey</p>
-            <h3 class="feature-title">10 drinking days. Beat your score.</h3>
-            <p class="feature-desc">Every Journey starts with the same allowance. Logging “I drank today” uses one of them. Sober days are the score. A drink does not wipe the Journey. When the 10 are used, the match ends and a new one starts.</p>
-            <figure class="phone phone-light">
-              <img src="assets/app-journey.png" alt="Onboarding screen. A Journey is your sober days scored against 10 drinking days. Example: Journey 1 is 10 sober days and 10 drinking days, Journey 2 is 15 and 10, Journey 3 is 20 and 10, Journey 4 is 30 and 10. Goal: more sober days than your last journey.">
-            </figure>
-          </article>
-
-          <article class="feature-card">
-            <p class="feature-eyebrow">Drinking Risk Meter</p>
-            <h3 class="feature-title">Three questions. A score from 0 to 12.</h3>
-            <p class="feature-desc">AUDIT-C is a screening tool, not a diagnosis. A high score means professional assessment is recommended. Answers stay for this session only and are not saved when you close the app.</p>
-            <figure class="phone">
-              <img src="assets/app-risk-meter.png" alt="Drinking Risk Meter at score 5 of 12, in the hazardous range, with a Reduction Goal to drink smaller amounts, add alcohol-free days, and avoid heavy occasions. A note says to speak with a healthcare professional before a major change if you drink very heavily or have had withdrawal symptoms. Based on screening answers, not a personal medical recommendation.">
-            </figure>
-            <p class="feature-more"><a href="#meter">See the questions and the zones</a></p>
-          </article>
-
-          <article class="feature-card span-2">
-            <div class="split">
-              <div>
-                <p class="feature-eyebrow">In the app</p>
-                <h3 class="feature-title">Days in a row, days in this Journey, and a careful timeline.</h3>
-                <p class="feature-desc">Streak days run First Step, Still Going, Body Adjusting, Sleep Adjusting, Heart Easing, Energy Returning, and Brain Adapting. Milestones run Early Battle (10, 15, 20), Moving Forward (30, 40, 50), Taking Control (60, 80, 100), and In Control (150, 200). Science describes possible changes as alcohol exposure decreases. It is not a promise and not a diagnosis. If withdrawal symptoms are severe or concerning, seek medical help.</p>
-              </div>
-              <div class="preview" data-tabs>
-                <div class="seg" role="tablist" aria-label="App tabs">
-                  <button type="button" class="is-active" role="tab" aria-selected="true" data-tab="streak" id="tab-streak">Streak</button>
-                  <button type="button" role="tab" aria-selected="false" data-tab="milestone" id="tab-milestone">Milestone</button>
-                  <button type="button" role="tab" aria-selected="false" data-tab="science" id="tab-science">Science</button>
+        <div class="progress-phones" role="list" aria-label="Streak, Milestone, and Science in the app">
+          <figure class="progress-device" role="listitem">
+            <div class="progress-device-frame">
+              <div class="progress-screen">
+                <div class="progress-tabs" aria-hidden="true">
+                  <span class="progress-tab is-active">Streak</span>
+                  <span class="progress-tab">Milestone</span>
+                  <span class="progress-tab">Science</span>
                 </div>
-                <div class="preview-panel" role="tabpanel" data-panel="streak" aria-labelledby="tab-streak">
-                  <figure class="phone">
-                    <img src="assets/app-streak.png" alt="Streak tab. Day 1 First Step, Day 2 Still Going, Day 3 Body Adjusting, and Day 4 Sleep Adjusting are checked. Day 5 Heart Easing, Day 6, and Day 7 are still ahead. Best Streak 10.">
-                  </figure>
-                </div>
-                <div class="preview-panel" role="tabpanel" data-panel="milestone" aria-labelledby="tab-milestone" hidden>
-                  <figure class="phone">
-                    <img src="assets/app-milestone.png" alt="Milestone tab. Early Battle shows 10 Days — First Win checked. 15 Days is next. Later rows stay locked until you log enough sober days. Stages continue through Moving Forward and Taking Control.">
-                  </figure>
-                </div>
-                <div class="preview-panel" role="tabpanel" data-panel="science" aria-labelledby="tab-science" hidden>
-                  <figure class="phone">
-                    <img src="assets/app-science.png" alt="Science tab. A timeline from Day 1 Heart and Blood through Day 28 Full Month. Day 7 Brain Chemistry is marked You are here. Later days stay quiet until you reach them.">
-                  </figure>
+                <div class="progress-panel">
+                  <ul class="streak-list">
+                    <li class="streak-row is-done">
+                      <span class="streak-emoji" aria-hidden="true">🌞</span>
+                      <span class="streak-name">Day 1 — First Step</span>
+                      <span class="streak-check" aria-hidden="true">✓</span>
+                    </li>
+                    <li class="streak-row is-done">
+                      <span class="streak-emoji" aria-hidden="true">🚶</span>
+                      <span class="streak-name">Day 2 — Still Going</span>
+                      <span class="streak-check" aria-hidden="true">✓</span>
+                    </li>
+                    <li class="streak-row is-done">
+                      <span class="streak-emoji" aria-hidden="true">🔥</span>
+                      <span class="streak-name">Day 3 — Body Adjusting</span>
+                      <span class="streak-check" aria-hidden="true">✓</span>
+                    </li>
+                    <li class="streak-row is-done">
+                      <span class="streak-emoji" aria-hidden="true">🌙</span>
+                      <span class="streak-name">Day 4 — Sleep Adjusting</span>
+                      <span class="streak-check" aria-hidden="true">✓</span>
+                    </li>
+                    <li class="streak-row">
+                      <span class="streak-emoji" aria-hidden="true">💚</span>
+                      <span class="streak-name">Day 5 — Heart Easing</span>
+                    </li>
+                    <li class="streak-row">
+                      <span class="streak-emoji" aria-hidden="true">⚡</span>
+                      <span class="streak-name">Day 6</span>
+                    </li>
+                    <li class="streak-row">
+                      <span class="streak-emoji" aria-hidden="true">🌟</span>
+                      <span class="streak-name">Day 7</span>
+                    </li>
+                    <li class="streak-row is-best">
+                      <span class="streak-emoji" aria-hidden="true">🏆</span>
+                      <span class="streak-name">Best Streak</span>
+                      <span class="streak-best-num">10</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
-          </article>
+            <figcaption class="progress-caption">
+              <span class="progress-caption-emoji" aria-hidden="true">🔥</span>
+              <strong>Streak</strong>
+              <span class="progress-caption-text">See consecutive sober days.</span>
+            </figcaption>
+          </figure>
 
-          <article class="feature-card orange-bg">
-            <p class="feature-eyebrow">Journey History</p>
-            <h3 class="feature-title">Watch whether the line is climbing.</h3>
-            <p class="feature-desc">Sober days per journey, shown from Journey 2 onward. The chart is yours. Nobody else’s line is on the screen.</p>
-            <figure class="phone">
-              <img src="assets/app-history.png" alt="History chart of sober days per journey, rising from 5 on Journey 1 to 22 on Journey 6.">
-            </figure>
-          </article>
+          <figure class="progress-device" role="listitem">
+            <div class="progress-device-frame">
+              <div class="progress-screen">
+                <div class="progress-tabs" aria-hidden="true">
+                  <span class="progress-tab">Streak</span>
+                  <span class="progress-tab is-active">Milestone</span>
+                  <span class="progress-tab">Science</span>
+                </div>
+                <div class="progress-panel">
+                  <div class="mile-stage">
+                    <p class="mile-stage-label is-early">Early Battle</p>
+                    <ul class="mile-list">
+                      <li class="mile-row is-done">
+                        <span class="mile-emoji" aria-hidden="true">⚡</span>
+                        <span class="mile-name">10 Days — First Win</span>
+                        <span class="mile-check" aria-hidden="true">✓</span>
+                      </li>
+                      <li class="mile-row">
+                        <span class="mile-emoji" aria-hidden="true">🌿</span>
+                        <span class="mile-name">15 Days</span>
+                      </li>
+                      <li class="mile-row is-locked">
+                        <span class="mile-lock" aria-hidden="true">🔒</span>
+                        <span class="mile-name">Log 15 sober days to unlock</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="mile-stage">
+                    <p class="mile-stage-label is-forward">Moving Forward</p>
+                    <ul class="mile-list">
+                      <li class="mile-row is-locked">
+                        <span class="mile-lock" aria-hidden="true">🔒</span>
+                        <span class="mile-name">Keep going to unlock</span>
+                      </li>
+                      <li class="mile-row is-locked">
+                        <span class="mile-lock" aria-hidden="true">🔒</span>
+                        <span class="mile-name">Keep going to unlock</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="mile-stage">
+                    <p class="mile-stage-label is-control">Taking Control</p>
+                    <ul class="mile-list">
+                      <li class="mile-row is-locked">
+                        <span class="mile-lock" aria-hidden="true">🔒</span>
+                        <span class="mile-name">Keep going to unlock</span>
+                      </li>
+                      <li class="mile-row is-locked">
+                        <span class="mile-lock" aria-hidden="true">🔒</span>
+                        <span class="mile-name">Keep going to unlock</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <figcaption class="progress-caption">
+              <span class="progress-caption-emoji" aria-hidden="true">🏆</span>
+              <strong>Milestones</strong>
+              <span class="progress-caption-text">Mark meaningful achievements.</span>
+            </figcaption>
+          </figure>
 
-          <article class="feature-card">
-            <p class="feature-eyebrow">Best Scores</p>
-            <h3 class="feature-title">Your personal record. Kept on this device.</h3>
-            <p class="feature-desc">Personal best Journeys stay with you. The mark to beat is yours. There is no public list.</p>
-            <figure class="phone">
-              <img src="assets/app-best-scores.png" alt="Best Scores. First place 30 days, second 24 days, third 18 days.">
-            </figure>
-          </article>
+          <figure class="progress-device" role="listitem">
+            <div class="progress-device-frame">
+              <div class="progress-screen">
+                <div class="progress-tabs" aria-hidden="true">
+                  <span class="progress-tab">Streak</span>
+                  <span class="progress-tab">Milestone</span>
+                  <span class="progress-tab is-active">Science</span>
+                </div>
+                <div class="progress-panel">
+                  <ol class="sci-timeline">
+                    <li class="sci-item is-done">
+                      <span class="sci-rail" aria-hidden="true"><i class="sci-dot"></i><i class="sci-line"></i></span>
+                      <div class="sci-card">
+                        <div class="sci-card-top">
+                          <span class="sci-emoji" aria-hidden="true">🫀</span>
+                          <div>
+                            <p class="sci-day">Day 1</p>
+                            <strong class="sci-title">Heart &amp; Blood</strong>
+                          </div>
+                          <span class="sci-status" aria-hidden="true">✓</span>
+                        </div>
+                        <p class="sci-preview">Alcohol is being cleared from the body; heart rate and blood pressure may begin moving toward usual levels…</p>
+                      </div>
+                    </li>
+                    <li class="sci-item is-done">
+                      <span class="sci-rail" aria-hidden="true"><i class="sci-dot"></i><i class="sci-line"></i></span>
+                      <div class="sci-card">
+                        <div class="sci-card-top">
+                          <span class="sci-emoji" aria-hidden="true">🫁</span>
+                          <div>
+                            <p class="sci-day">Day 3</p>
+                            <strong class="sci-title">Body Adjusting</strong>
+                          </div>
+                          <span class="sci-status" aria-hidden="true">✓</span>
+                        </div>
+                        <p class="sci-preview">The body continues adjusting as alcohol exposure decreases…</p>
+                      </div>
+                    </li>
+                    <li class="sci-item is-here">
+                      <span class="sci-rail" aria-hidden="true"><i class="sci-dot"></i><i class="sci-line"></i></span>
+                      <div class="sci-card">
+                        <div class="sci-card-top">
+                          <span class="sci-emoji" aria-hidden="true">🧠</span>
+                          <div>
+                            <p class="sci-day">Day 7</p>
+                            <strong class="sci-title">Brain Chemistry</strong>
+                          </div>
+                          <em class="sci-here-tag">You are here</em>
+                        </div>
+                        <p class="sci-body">Brain reward pathways can begin adapting as alcohol exposure decreases. Sleep and mood may begin to improve as the body adjusts.</p>
+                      </div>
+                    </li>
+                    <li class="sci-item">
+                      <span class="sci-rail" aria-hidden="true"><i class="sci-dot"></i><i class="sci-line"></i></span>
+                      <div class="sci-card">
+                        <div class="sci-card-top">
+                          <span class="sci-emoji" aria-hidden="true">🌿</span>
+                          <div>
+                            <p class="sci-day">Day 14</p>
+                            <strong class="sci-title">Liver &amp; Blood Pressure</strong>
+                          </div>
+                          <span class="sci-chev" aria-hidden="true">›</span>
+                        </div>
+                        <p class="sci-preview">Changes in the gut microbiome may begin as alcohol exposure decreases…</p>
+                      </div>
+                    </li>
+                    <li class="sci-item">
+                      <span class="sci-rail" aria-hidden="true"><i class="sci-dot"></i><i class="sci-line"></i></span>
+                      <div class="sci-card">
+                        <div class="sci-card-top">
+                          <span class="sci-emoji" aria-hidden="true">🛡️</span>
+                          <div>
+                            <p class="sci-day">Day 21</p>
+                            <strong class="sci-title">Immune System</strong>
+                          </div>
+                          <span class="sci-chev" aria-hidden="true">›</span>
+                        </div>
+                        <p class="sci-preview">Immune function may begin to improve as alcohol exposure decreases…</p>
+                      </div>
+                    </li>
+                    <li class="sci-item">
+                      <span class="sci-rail" aria-hidden="true"><i class="sci-dot"></i></span>
+                      <div class="sci-card">
+                        <div class="sci-card-top">
+                          <span class="sci-emoji" aria-hidden="true">💎</span>
+                          <div>
+                            <p class="sci-day">Day 28</p>
+                            <strong class="sci-title">Full Month</strong>
+                          </div>
+                          <span class="sci-chev" aria-hidden="true">›</span>
+                        </div>
+                        <p class="sci-preview">Some people notice improvements in sleep, mood, energy, or overall wellbeing…</p>
+                      </div>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+            <figcaption class="progress-caption">
+              <span class="progress-caption-emoji" aria-hidden="true">🧠</span>
+              <strong>Science</strong>
+              <span class="progress-caption-text">Explore possible changes over time.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
 
-          <article class="feature-card">
-            <p class="feature-eyebrow">Calendar</p>
-            <h3 class="feature-title">A month of sober days and drinking days.</h3>
-            <p class="feature-desc">Tap a past day to log a missed day. If yesterday was left blank, the app asks: did you drink? Days show as sober, drinking, or not logged.</p>
-          </article>
+    <section class="risk" id="meter">
+      <div class="risk-inner">
+        <div class="risk-copy">
+          <h2 class="risk-title">Understand Your Drinking Risk</h2>
+          <p class="risk-lead">Three questions. A clearer picture of your drinking.</p>
+          <p class="risk-body">Answer three short questions about your drinking habits to get an AUDIT-C screening score and understand whether your drinking pattern may put your health at risk.</p>
 
-          <article class="feature-card">
-            <p class="feature-eyebrow">Lifetime</p>
-            <h3 class="feature-title">Three totals that grow with every log.</h3>
-            <dl class="lifetime">
-              <div><dt>Journey</dt><dd>—</dd></div>
-              <div><dt>Sober Days</dt><dd>—</dd></div>
-              <div><dt>Drink Days</dt><dd>—</dd></div>
-            </dl>
-          </article>
+          <h3 class="risk-steps-title">How it works</h3>
+          <ol class="risk-steps">
+            <li>
+              <span class="risk-step-num" aria-hidden="true">1</span>
+              <div>
+                <strong>Answer 3 questions</strong>
+                <p>Tell us how often you drink, how much you typically drink, and how often you drink heavily.</p>
+              </div>
+            </li>
+            <li>
+              <span class="risk-step-num" aria-hidden="true">2</span>
+              <div>
+                <strong>See your score</strong>
+                <p>Get a quick indication of your drinking risk based on your answers.</p>
+              </div>
+            </li>
+            <li>
+              <span class="risk-step-num" aria-hidden="true">3</span>
+              <div>
+                <strong>Decide your next step</strong>
+                <p>Whether you want to cut back or quit, start making changes one day at a time.</p>
+              </div>
+            </li>
+          </ol>
 
-          <article class="feature-card span-2">
-            <p class="feature-eyebrow">Knowledge</p>
-            <h3 class="feature-title">Short notes you can page through.</h3>
-            <ul class="facts">
-              <li>The WHO AUDIT-C is a 3-question clinical screening tool used by doctors in over 50 countries to identify hazardous and harmful drinking patterns. <cite>WHO AUDIT Guidelines 2001</cite></li>
-              <li>Home pours are typically 40–60% larger than bar pegs. What feels like 2 drinks at home could be 3–4 standard drinks. The glass size is the illusion. <cite>NIAAA Drink Size Research</cite></li>
-              <li>Needing more drinks to feel the same effect is not a badge of honour — it is a clinical warning sign. Tolerance means your liver and brain have adapted to alcohol as a baseline. <cite>NIAAA, DSM-5</cite></li>
-            </ul>
-          </article>
-
-          <article class="feature-card">
-            <p class="feature-eyebrow">Reminder</p>
-            <h3 class="feature-title">A time that belongs to your day.</h3>
-            <p class="feature-desc">Set a daily reminder with hour, minute, and AM/PM, so the log has a time you chose.</p>
-          </article>
+          <a class="btn-brand" href="https://fedmudit-max.github.io/alcohol-cursor/">Check Your Drinking Risk</a>
+          <p class="risk-disclaimer">Your score is a screening indicator, not a diagnosis. A lower score does not mean drinking is risk-free.</p>
         </div>
 
-        <div class="shot-row">
-          <figure class="phone">
-            <img src="assets/app-streak-days.png" alt="Streak tab a few days in. Day 1 First Step, Day 2 Still Going, and Day 3 Body Adjusting are checked. Best Streak 9.">
-          </figure>
-          <figure class="phone">
-            <img src="assets/app-milestone-locked.png" alt="Milestone tab early on. Early Battle shows 10 Days and 15 Days. Moving Forward and Taking Control stay locked until more sober days are logged.">
-          </figure>
-          <figure class="phone">
-            <img src="assets/app-best-scores-rank.png" alt="Best Scores ranked 22 days, 18 days, and 15 days.">
-          </figure>
-        </div>
+        <figure class="risk-phone">
+          <div class="progress-device-frame">
+            <div class="progress-screen risk-screen">
+              <img src="assets/section5-risk-meter.png" alt="Drinking Risk Meter showing an AUDIT-C score of 5 in the hazardous range, with a Take Test button and a Reduction Goal card with suggested focus areas." width="770" height="1400">
+            </div>
+          </div>
+        </figure>
       </div>
     </section>
 
@@ -309,101 +467,6 @@
             </article>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="meter" id="meter">
-      <div class="meter-inner">
-        <div class="section-header">
-          <h2 class="section-title">AUDIT-C, scored from 0 to 12, shows what your drinking level means.</h2>
-          <p class="section-sub">A high score means professional assessment is recommended. Answers are kept for this session only.</p>
-        </div>
-        <ol class="questions">
-          <li>
-            <h3>How often do you have a drink containing alcohol?</h3>
-            <p>Never · Monthly or less · 2 to 4 times a month · 2 to 3 times a week · 4 or more times a week</p>
-          </li>
-          <li>
-            <h3>How many standard drinks do you have on a typical drinking day?</h3>
-            <p>1 standard drink ≈ 30 ml of 40% whisky (about 10 g alcohol).</p>
-            <ul>
-              <li>1 or 2 drinks (30 or 60 ml)</li>
-              <li>3 or 4 drinks (90 or 120 ml)</li>
-              <li>5 or 6 drinks (~150–180 ml @ 40% whisky)</li>
-              <li>7, 8 or 9 drinks (210 to 270 ml)</li>
-              <li>10 or more drinks (300 ml+)</li>
-            </ul>
-          </li>
-          <li>
-            <h3>How often do you have 6 or more drinks on one occasion?</h3>
-            <p>6 or more standard drinks is about 60 g of alcohol. 180 ml of 40% whisky contains about 57 g — just under 6 of the 10 g standard drinks used by AUDIT.</p>
-            <p>Never · Less than monthly · Monthly · Weekly · Daily or almost daily</p>
-          </li>
-        </ol>
-
-        <div class="ref-row">
-          <details>
-            <summary>I drink beer — how many drinks is that?</summary>
-            <div class="table-scroll">
-              <table>
-                <caption>Bottle size converted to standard drinks</caption>
-                <thead>
-                  <tr><th>Bottle</th><th>Type</th><th>Drinks</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>650 ml</td><td>Strong (7.5% ABV)</td><td>≈ 4 drinks</td></tr>
-                  <tr><td>500 ml</td><td>Strong (7.5% ABV)</td><td>≈ 3 drinks</td></tr>
-                  <tr><td>650 ml</td><td>Regular (5% ABV)</td><td>≈ 2.5 drinks</td></tr>
-                  <tr><td>500 ml</td><td>Regular (5% ABV)</td><td>≈ 2 drinks</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </details>
-          <details>
-            <summary>I drink beer — what is 6 drinks in beer?</summary>
-            <div class="table-scroll">
-              <table>
-                <caption>What equals 6 standard drinks</caption>
-                <thead>
-                  <tr><th>Bottle</th><th>Type</th><th>= 6 drinks</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>650 ml</td><td>Strong (7.5% ABV)</td><td>1.5 bottles</td></tr>
-                  <tr><td>500 ml</td><td>Strong (7.5% ABV)</td><td>2 cans</td></tr>
-                  <tr><td>650 ml</td><td>Regular (5% ABV)</td><td>2.3 bottles</td></tr>
-                  <tr><td>500 ml</td><td>Regular (5% ABV)</td><td>3 cans</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </details>
-        </div>
-
-        <h3 class="zone-title">Where a score lands</h3>
-        <ol class="zones">
-          <li><span class="z z0"></span><strong>No alcohol reported</strong> No alcohol reported on screening</li>
-          <li><span class="z z1"></span><strong>Lower-risk range</strong> AUDIT-C score 1–3</li>
-          <li><span class="z z2"></span><strong>Hazardous range</strong> AUDIT-C score 4–5</li>
-          <li><span class="z z3"></span><strong>Harmful range</strong> AUDIT-C score 6–8</li>
-          <li><span class="z z4"></span><strong>Seek support</strong> AUDIT-C score 9–12</li>
-        </ol>
-
-        <div class="reduction">
-          <p class="card-kicker">Reduction Goal</p>
-          <h3>After the test, the app names one place to focus first.</h3>
-          <ul>
-            <li><strong>Heavy occasions.</strong> Focus first: avoid heavy drinking occasions.</li>
-            <li><strong>Amount.</strong> Focus first: reduce how much you drink per session.</li>
-            <li><strong>Frequency.</strong> Focus first: drink on fewer days.</li>
-            <li><strong>Lower-risk range.</strong> Less alcohol is always better. Maintaining or reducing further is worthwhile. Low risk is not risk free.</li>
-          </ul>
-          <p>Alongside the focus, the app also suggests more alcohol-free days, smaller amounts, and fewer heavy occasions. Based on your screening answers. Not a personal medical recommendation.</p>
-        </div>
-
-        <aside class="safety">
-          <h3>Seek professional support</h3>
-          <p>A score in the higher range means: consider speaking with a healthcare professional about your drinking.</p>
-          <p>If you drink heavily every day or have experienced withdrawal symptoms before, don’t stop or make a major reduction suddenly without medical guidance. Alcohol withdrawal can be dangerous and, in some cases, life-threatening. A healthcare professional can help you decide on a safe reduction or stopping plan.</p>
-        </aside>
       </div>
     </section>
 
