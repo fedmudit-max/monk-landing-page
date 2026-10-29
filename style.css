@@ -193,20 +193,21 @@ section[id] { scroll-margin-top: calc(var(--header) + 12px); }
 .hero-phone {
   order: -1;
   position: relative;
-  width: min(74%, 280px);
-  max-width: 100%;
+  width: 100%;
+  max-width: 360px;
   margin: 0 auto;
   padding: 0;
   border: 0;
   background: none;
-  box-shadow: none;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.28);
+  border-radius: 44px;
   box-sizing: border-box;
   overflow: visible;
+  justify-self: center;
 }
 
 .hero-phone .progress-device-frame {
   box-shadow:
-    0 28px 70px rgba(0, 0, 0, 0.45),
     inset 0 0 0 1px rgba(255, 255, 255, 0.28),
     inset 0 0 0 3px #050505;
 }
@@ -261,20 +262,20 @@ section[id] { scroll-margin-top: calc(var(--header) + 12px); }
   color: #fff;
 }
 
-.hero-pace {
-  margin: 0 0 28px;
-  font-family: Raleway, Inter, sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.4;
-  color: rgba(255, 255, 255, 0.7);
-}
-
 .hero-actions {
   display: flex;
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
+}
+
+.hero-pace {
+  margin: 14px 0 0;
+  font-family: Raleway, Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .btn-primary {
@@ -401,7 +402,17 @@ section[id] { scroll-margin-top: calc(var(--header) + 12px); }
   color: var(--green-deep);
 }
 
-.works-seq > li:last-child h3 { margin-bottom: 0; }
+.works-seq > li:last-child h3 {
+  margin-bottom: 12px;
+}
+
+.works-seq > li:last-child p {
+  margin: 0;
+  max-width: 36rem;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--body);
+}
 
 .works-grid {
   display: grid;
@@ -547,7 +558,7 @@ section[id] { scroll-margin-top: calc(var(--header) + 12px); }
 }
 
 .progress-header {
-  max-width: 640px;
+  max-width: 800px;
   margin: 0 auto 40px;
   text-align: center;
   padding-inline: 4px;
@@ -561,6 +572,15 @@ section[id] { scroll-margin-top: calc(var(--header) + 12px); }
 .progress-header .section-sub {
   margin-left: auto;
   margin-right: auto;
+}
+
+.progress-intro {
+  margin: 20px auto 0;
+  max-width: 34em;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--body);
 }
 
 .progress-phones {
@@ -714,6 +734,107 @@ section[id] { scroll-margin-top: calc(var(--header) + 12px); }
   border-radius: 0;
 }
 
+/*
+  §4 Journey shot — absolute fill under tabs.
+  Before: inherited .progress-screen padding 26/18 (and mobile 24/16),
+  #f4f5f7 grey bg, flex panel that left gutters. After: padding 0,
+  white/transparent stack, panel+img absolute inset under tabs.
+*/
+.progress-device .progress-screen--shot {
+  position: relative;
+  height: 487px;
+  min-height: 487px;
+  max-height: 487px;
+  padding: 0 !important;
+  margin: 0;
+  display: block;
+  overflow: hidden;
+  background: #fff !important;
+  background-image: none !important;
+}
+
+/* Match Streak/Science: full-width hairline + green active underline */
+.progress-screen--shot .progress-tabs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  flex: none;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 22px 4px 0; /* notch + same side inset as .progress-tabs */
+  margin: 0;
+  background:
+    linear-gradient(180deg, #fff 0%, #fafafa 100%);
+  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.04);
+  border: 0;
+  border-bottom: 1px solid rgba(60, 60, 67, 0.12);
+}
+
+.progress-screen--shot .progress-tab {
+  margin-bottom: -1px;
+  border-bottom: 2.5px solid transparent;
+}
+
+.progress-screen--shot .progress-tab.is-active {
+  border-bottom-color: #34c759;
+}
+
+.progress-panel--shot {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 58px; /* under HTML tab row */
+  display: block;
+  padding: 0 !important;
+  margin: 0;
+  border: 0;
+  background: #fff !important;
+  background-image: none !important;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.progress-shot-card {
+  position: absolute;
+  inset: 0;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  overflow: hidden;
+  isolation: isolate;
+  transform: none;
+  clip-path: none;
+  background: #fff;
+  box-shadow: none;
+}
+
+.progress-shot-card img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  object-fit: cover;
+  object-position: left top;
+  border-radius: 0;
+  /* clip PNG row-0 grey/green hairline; translateY keeps gap above EARLY BATTLE */
+  clip-path: inset(2px 0 0 0);
+  transform: translateY(10px);
+  box-shadow: none;
+}
+
 .progress-device:nth-child(1) .progress-screen,
 .progress-device:nth-child(3) .progress-screen {
   transform: translateZ(12px);
@@ -737,6 +858,11 @@ section[id] { scroll-margin-top: calc(var(--header) + 12px); }
   background: #0b0b0d;
   border-radius: 12px;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+/* Journey: tabs are z-index 5 — keep notch above them like Streak/Science */
+.progress-screen--shot::before {
+  z-index: 6;
 }
 
 /* home indicator — sits in bottom screen padding, above chassis bezel */
@@ -833,6 +959,25 @@ section[id] { scroll-margin-top: calc(var(--header) + 12px); }
     radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.9), transparent 55%),
     linear-gradient(180deg, #f7f8fa 0%, #eef0f3 100%);
   overflow: hidden;
+}
+
+/* Must follow .progress-panel — kills #f7f8fa/#eef0f3 gutters on Journey */
+.progress-screen--shot .progress-panel.progress-panel--shot {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 58px;
+  z-index: 1;
+  flex: none;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: #fff;
+  background-image: none;
+  overflow: hidden;
+  box-shadow: none;
 }
 
 .progress-panel .streak-list,
@@ -1715,7 +1860,7 @@ a.choice.choice-drank .choice-mark {
   justify-content: flex-start;
 }
 
-/* —— Section 5: drinking risk (copy + phone) —— */
+/* —— Section 5: drinking risk (mobile: phone above steps; desktop: side-by-side) —— */
 .risk {
   background: #fff;
   padding: 96px 24px;
@@ -1726,12 +1871,23 @@ a.choice.choice-drank .choice-mark {
   max-width: var(--max);
   margin: 0 auto;
   display: grid;
-  gap: 48px;
-  align-items: center;
+  gap: 36px;
+  justify-items: center;
+  text-align: center;
+  grid-template-areas:
+    "title"
+    "phone"
+    "copy";
 }
+
+.risk-title { grid-area: title; }
+.risk-phone { grid-area: phone; }
+.risk-copy { grid-area: copy; }
 
 .risk-copy {
   max-width: 36rem;
+  width: 100%;
+  text-align: left;
 }
 
 .risk-title {
@@ -1740,7 +1896,9 @@ a.choice.choice-drank .choice-mark {
   letter-spacing: -1px;
   line-height: 1.12;
   color: var(--green-deep);
-  margin: 0 0 14px;
+  margin: 0;
+  max-width: 20em;
+  text-align: center;
 }
 
 .risk-lead {
@@ -1823,9 +1981,10 @@ a.choice.choice-drank .choice-mark {
 }
 
 .risk-phone {
-  margin: 0 auto;
-  width: min(100%, 280px);
+  margin: 0;
+  width: min(100%, 300px);
   max-width: 100%;
+  justify-self: center;
   padding: 0;
   border: 0;
   background: none;
@@ -2067,7 +2226,12 @@ a.choice.choice-drank .choice-mark {
     grid-template-columns: 1.1fr 0.9fr;
     gap: 64px;
   }
-  .hero-phone { order: 0; width: min(100%, 280px); }
+  .hero-phone {
+    order: 0;
+    width: 100%;
+    max-width: 360px;
+    margin-inline: auto;
+  }
   .works-grid { grid-template-columns: 300px 1fr; gap: 48px; }
   .paths-grid { grid-template-columns: 1fr 1fr; }
   .feature-grid,
@@ -2097,13 +2261,27 @@ a.choice.choice-drank .choice-mark {
   .shot-row { grid-template-columns: repeat(3, 1fr); }
   .risk-inner {
     grid-template-columns: 1.05fr 0.95fr;
-    gap: 56px;
+    grid-template-areas:
+      "title phone"
+      "copy phone";
+    gap: 28px 56px;
     align-items: center;
+    justify-items: stretch;
+    text-align: left;
+  }
+  .risk-title {
+    text-align: left;
+    margin: 0;
+    justify-self: start;
+  }
+  .risk-copy {
+    max-width: none;
+    justify-self: stretch;
   }
   .risk-phone {
-    margin-left: auto;
-    margin-right: 0;
     width: min(100%, 280px);
+    justify-self: end;
+    align-self: center;
   }
   .progress-phones {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2225,7 +2403,8 @@ a.choice.choice-drank .choice-mark {
   }
 
   .hero-phone {
-    width: min(78%, 260px);
+    width: 100%;
+    max-width: 360px;
   }
 
   .works {
@@ -2352,12 +2531,11 @@ a.choice.choice-drank .choice-mark {
   }
 
   .risk-inner {
-    gap: 36px;
+    gap: 28px;
   }
 
   .risk-phone {
     width: min(100%, 260px);
-    margin-inline: auto;
   }
 
   .progress {
@@ -2429,6 +2607,23 @@ a.choice.choice-drank .choice-mark {
     padding: 24px 0 16px;
   }
 
+  /* Journey: keep absolute flush — do not inherit mobile screen padding/grey */
+  .progress-device .progress-screen--shot {
+    height: min(433px, 65vh);
+    min-height: 0;
+    max-height: none;
+    padding: 0 !important;
+    background: #fff !important;
+    background-image: none !important;
+  }
+
+  .progress-screen--shot .progress-panel.progress-panel--shot {
+    top: 54px;
+    padding: 0;
+    background: transparent;
+    background-image: none;
+  }
+
   .progress-screen::after {
     bottom: 5px;
     width: 96px;
@@ -2490,7 +2685,8 @@ a.choice.choice-drank .choice-mark {
   }
 
   .hero-phone {
-    width: min(86%, 240px);
+    width: 100%;
+    max-width: 360px;
   }
 
   .path-card {
@@ -2504,6 +2700,17 @@ a.choice.choice-drank .choice-mark {
 
   .progress-screen {
     height: min(397px, 62vh);
+  }
+
+  .progress-device .progress-screen--shot {
+    height: min(397px, 62vh);
+    min-height: 0;
+    max-height: none;
+    padding: 0 !important;
+  }
+
+  .progress-screen--shot .progress-panel.progress-panel--shot {
+    top: 50px;
   }
 
   .progress-tab {
