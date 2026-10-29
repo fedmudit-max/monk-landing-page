@@ -93,7 +93,15 @@ section[id] { scroll-margin-top: calc(var(--header) + 12px); }
   gap: 8px;
 }
 
-.logo span { color: var(--orange); }
+.logo-word {
+  white-space: nowrap;
+}
+
+.logo-word span,
+.logo > span {
+  color: var(--orange);
+}
+
 .logo img { width: 28px; height: 28px; border-radius: 7px; }
 
 .nav {
@@ -454,6 +462,7 @@ section[id] { scroll-margin-top: calc(var(--header) + 12px); }
 .paths-footer {
   margin-top: 32px;
   text-align: center;
+  color: var(--green-brand);
 }
 .path-card { border-radius: 24px; padding: 40px; }
 .path-card.control {
@@ -507,7 +516,6 @@ section[id] { scroll-margin-top: calc(var(--header) + 12px); }
 .features,
 .position,
 .compare,
-.trust,
 .choices { padding: 96px 24px; }
 
 .features { background: #fff; }
@@ -515,7 +523,6 @@ section[id] { scroll-margin-top: calc(var(--header) + 12px); }
 .how-inner,
 .position-inner,
 .compare-inner,
-.trust-inner,
 .choices-inner {
   max-width: var(--max);
   margin: 0 auto;
@@ -1249,7 +1256,6 @@ section[id] { scroll-margin-top: calc(var(--header) + 12px); }
 .facts,
 .wins,
 .reduction ul,
-.trust-card ul,
 .questions ul {
   margin: 12px 0 0;
   padding-left: 1.15rem;
@@ -1886,7 +1892,7 @@ a.choice.choice-drank .choice-mark {
 
 .compare-table {
   width: 100%;
-  min-width: 600px;
+  min-width: 560px;
   border-collapse: collapse;
   table-layout: fixed;
 }
@@ -1896,7 +1902,7 @@ a.choice.choice-drank .choice-mark {
   padding: 14px 12px;
   border-bottom: 1px solid var(--line);
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 1.35;
   vertical-align: middle;
 }
 
@@ -1907,17 +1913,31 @@ a.choice.choice-drank .choice-mark {
   color: var(--grey-text);
   text-align: center;
   background: var(--grey-bg);
+  white-space: normal;
+  line-height: 1.25;
+  width: 16%;
+}
+
+.compare-table thead th.compare-competitor {
+  width: 14%;
   white-space: nowrap;
+}
+
+.compare-br {
+  display: none;
 }
 
 .compare-table thead th:first-child,
 .compare-table tbody th {
   text-align: left;
-  width: 28%;
-  min-width: 180px;
+  width: 32%;
+  min-width: 0;
   color: var(--dark);
   font-weight: 600;
   background: #fff;
+  white-space: normal;
+  hyphens: auto;
+  overflow-wrap: break-word;
 }
 
 .compare-table thead th:first-child {
@@ -1959,6 +1979,14 @@ a.choice.choice-drank .choice-mark {
 .compare-table thead th.compare-product {
   color: var(--green-deep);
   box-shadow: inset 0 2px 0 var(--green-brand);
+  width: 14%;
+  white-space: nowrap;
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 1.2;
+  hyphens: none;
+  word-break: normal;
+  overflow-wrap: normal;
 }
 
 .compare-table tbody td.compare-product {
@@ -1976,29 +2004,6 @@ a.choice.choice-drank .choice-mark {
   font-weight: 700;
   font-size: 15px;
 }
-
-.trust { background: var(--grey-bg); }
-
-.trust-cards {
-  display: grid;
-  gap: 16px;
-}
-
-.trust-card {
-  background: #fff;
-  border: 1.5px solid var(--line);
-  border-radius: 20px;
-  padding: 28px;
-}
-
-.trust-card.featured {
-  border-color: var(--green-brand);
-  background: var(--green-light);
-}
-
-.trust-card h3 { margin-bottom: 8px; }
-.trust-card li { margin: 8px 0; }
-.text-link { font-weight: 700; }
 
 .cta-section {
   background: linear-gradient(135deg, var(--green-deep), #1a7a30);
@@ -2089,7 +2094,6 @@ a.choice.choice-drank .choice-mark {
     vertical-align: top;
   }
   .choice { width: auto; }
-  .trust-cards { grid-template-columns: 1fr 1fr; }
   .shot-row { grid-template-columns: repeat(3, 1fr); }
   .risk-inner {
     grid-template-columns: 1.05fr 0.95fr;
@@ -2256,7 +2260,6 @@ a.choice.choice-drank .choice-mark {
   .features,
   .position,
   .compare,
-  .trust,
   .choices,
   .risk {
     padding: 64px 20px;
@@ -2266,13 +2269,60 @@ a.choice.choice-drank .choice-mark {
     margin-bottom: 28px;
   }
 
+  .compare-table {
+    min-width: 0;
+    width: 100%;
+  }
+
   .compare-table th,
   .compare-table td {
-    padding: 12px 10px;
+    padding: 10px 6px;
+  }
+
+  .compare-table thead th {
+    font-size: 11px;
+    padding: 10px 4px;
+    width: 15%;
+  }
+
+  .compare-table thead th.compare-competitor {
+    width: 12%;
+    white-space: normal;
+  }
+
+  .compare-table thead th.compare-product {
+    width: 13%;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 11px;
+    white-space: normal;
+    hyphens: none;
+    word-break: keep-all;
+    overflow-wrap: normal;
+  }
+
+  .compare-br {
+    display: block;
+  }
+
+  .compare-table thead th:first-child,
+  .compare-table tbody th {
+    width: 34%;
+    min-width: 0;
+    max-width: 9.5em;
+    font-size: 12px;
+    line-height: 1.3;
+    padding-left: 10px;
+    padding-right: 8px;
   }
 
   .compare-table tbody th {
     font-size: 12px;
+  }
+
+  .compare-yes,
+  .compare-no {
+    font-size: 14px;
   }
 
   .history .history-intro {
@@ -2395,6 +2445,24 @@ a.choice.choice-drank .choice-mark {
 }
 
 @media (max-width: 640px) {
+  .compare-table thead th:first-child,
+  .compare-table tbody th {
+    max-width: 8.5em;
+    font-size: 11px;
+  }
+
+  .compare-table th,
+  .compare-table td {
+    padding: 9px 4px;
+  }
+
+  .compare-table thead th.compare-product {
+    width: 12%;
+    font-size: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
   .score-table thead {
     position: absolute;
     width: 1px;
@@ -2462,4 +2530,118 @@ a.choice.choice-drank .choice-mark {
   .progress-screen {
     transform: none;
   }
+}
+
+/* —— Privacy policy page —— */
+.privacy-page {
+  background: var(--grey-bg);
+}
+
+.privacy-main {
+  padding: calc(var(--header) + 40px) 24px 64px;
+}
+
+.privacy-wrap {
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.privacy-article {
+  background: var(--white);
+  border: 1.5px solid var(--line);
+  border-radius: 20px;
+  padding: 32px 28px 36px;
+  box-shadow: var(--shadow);
+  color: var(--body);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+@media (min-width: 480px) {
+  .privacy-article {
+    padding: 40px 36px 44px;
+  }
+}
+
+.privacy-article h1 {
+  margin: 0 0 8px;
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 900;
+  letter-spacing: -0.8px;
+  color: var(--dark);
+  line-height: 1.15;
+}
+
+.privacy-effective {
+  margin: 0 0 24px;
+  font-size: 15px;
+  color: var(--grey-text);
+}
+
+.privacy-lead {
+  margin: 0 0 14px;
+  font-size: 17px;
+  color: var(--dark);
+  font-weight: 500;
+}
+
+.privacy-article h2 {
+  margin: 28px 0 10px;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -0.3px;
+}
+
+.privacy-article h2:first-of-type {
+  margin-top: 20px;
+}
+
+.privacy-article p {
+  margin: 0 0 12px;
+}
+
+.privacy-article ul {
+  margin: 0 0 12px;
+  padding-left: 1.25rem;
+}
+
+.privacy-article li {
+  margin: 0 0 6px;
+}
+
+.privacy-article strong {
+  color: var(--dark);
+  font-weight: 700;
+}
+
+.privacy-article a {
+  color: var(--green-brand);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.privacy-article a:hover {
+  text-decoration: underline;
+}
+
+.privacy-contact {
+  margin-top: 4px;
+}
+
+.privacy-hr {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 28px 0 16px;
+}
+
+.privacy-updated {
+  margin: 0;
+  font-size: 14px;
+  color: var(--grey-text);
+}
+
+.nav a[aria-current="page"] {
+  color: #fff;
+  font-weight: 700;
 }
