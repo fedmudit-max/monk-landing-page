@@ -451,6 +451,10 @@ section[id] { scroll-margin-top: calc(var(--header) + 12px); }
   margin: 0 auto;
 }
 .paths-grid { display: grid; gap: 20px; }
+.paths-footer {
+  margin-top: 32px;
+  text-align: center;
+}
 .path-card { border-radius: 24px; padding: 40px; }
 .path-card.control {
   background: var(--green-light);
@@ -502,6 +506,7 @@ section[id] { scroll-margin-top: calc(var(--header) + 12px); }
 
 .features,
 .position,
+.compare,
 .trust,
 .choices { padding: 96px 24px; }
 
@@ -509,6 +514,7 @@ section[id] { scroll-margin-top: calc(var(--header) + 12px); }
 .features-inner,
 .how-inner,
 .position-inner,
+.compare-inner,
 .trust-inner,
 .choices-inner {
   max-width: var(--max);
@@ -1504,56 +1510,73 @@ a.choice.choice-drank .choice-mark {
 .why { margin-top: 64px; }
 .why .section-sub { margin-bottom: 24px; }
 
-/* —— Section 6: two bands (copy | panel) —— */
+/* —— Section 6: intro + two bands (copy | panel) + close —— */
+.history .history-intro {
+  max-width: 640px;
+  margin: 0 0 48px;
+  text-align: left;
+}
+
+.history .history-intro .section-title {
+  color: var(--dark);
+}
+
+.history .history-intro .section-sub {
+  max-width: 40rem;
+}
+
 .history-band {
   display: grid;
   gap: 28px;
-  align-items: start;
+  align-items: center;
   width: 100%;
 }
 
 .history-band + .history-band {
-  margin-top: 64px;
+  margin-top: 56px;
 }
 
 .history-band-copy {
   min-width: 0;
+  max-width: 28rem;
 }
 
-.history .history-header {
-  max-width: none;
-  margin: 0 0 24px;
-  text-align: left;
+.history-band-title {
+  margin: 0 0 10px;
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  line-height: 1.2;
+  color: var(--green-deep);
 }
 
-.history .history-header .section-title {
+.history-band-lead {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.35;
   color: var(--dark);
 }
 
-.history .history-header .section-sub {
-  max-width: 36rem;
-}
-
-.history .who-grid {
-  display: grid;
-  gap: 16px;
+.history-band-body {
   margin: 0;
-}
-
-.why-stack {
-  display: grid;
-  gap: 16px;
-}
-
-.history .feature-card {
-  background: #fff;
-  border: 1px solid rgba(60, 60, 67, 0.06);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--grey-text);
 }
 
 .history-band > .app-panel {
   width: 100%;
   max-width: 100%;
+}
+
+.history-close {
+  margin: 56px 0 0;
+  max-width: 36rem;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.55;
+  color: var(--body);
 }
 
 .app-panel {
@@ -1833,6 +1856,127 @@ a.choice.choice-drank .choice-mark {
   border-radius: 0;
 }
 
+/* —— Section 7: comparison table —— */
+.compare {
+  background: #fff;
+}
+
+.compare-header {
+  max-width: 640px;
+  margin: 0 0 36px;
+}
+
+.compare-header .section-title {
+  color: var(--green-deep);
+}
+
+.compare-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.compare-scroll:focus-visible {
+  outline: 2px solid var(--green-brand);
+  outline-offset: 3px;
+}
+
+.compare-table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+  line-height: 1.4;
+  vertical-align: middle;
+}
+
+.compare-table thead th {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: var(--grey-text);
+  text-align: center;
+  background: var(--grey-bg);
+  white-space: nowrap;
+}
+
+.compare-table thead th:first-child,
+.compare-table tbody th {
+  text-align: left;
+  width: 28%;
+  min-width: 180px;
+  color: var(--dark);
+  font-weight: 600;
+  background: #fff;
+}
+
+.compare-table thead th:first-child {
+  color: var(--grey-text);
+  font-weight: 700;
+  background: var(--grey-bg);
+  position: sticky;
+  left: 0;
+  z-index: 2;
+}
+
+.compare-table tbody th {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--body);
+  background: #fff;
+  box-shadow: 1px 0 0 var(--line);
+}
+
+.compare-table tbody td {
+  text-align: center;
+  color: var(--body);
+}
+
+.compare-table tbody tr:last-child th,
+.compare-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.compare-table .compare-product {
+  background: var(--green-light);
+  color: var(--green-deep);
+  font-weight: 700;
+}
+
+.compare-table thead th.compare-product {
+  color: var(--green-deep);
+  box-shadow: inset 0 2px 0 var(--green-brand);
+}
+
+.compare-table tbody td.compare-product {
+  font-weight: 700;
+}
+
+.compare-yes {
+  color: var(--green-brand);
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.compare-no {
+  color: #c4c9c6;
+  font-weight: 700;
+  font-size: 15px;
+}
+
 .trust { background: var(--grey-bg); }
 
 .trust-cards {
@@ -1924,15 +2068,11 @@ a.choice.choice-drank .choice-mark {
   .feature-grid,
   .why-grid { grid-template-columns: 1fr 1fr; }
   .span-2 { grid-column: span 2; }
-  .who-grid { grid-template-columns: 1fr; }
-  .history .who-grid { grid-template-columns: 1fr; }
+  .who-grid { grid-template-columns: 1fr 1fr; }
   .history-band {
     grid-template-columns: 1.05fr 0.95fr;
     gap: 48px;
     align-items: center;
-  }
-  .history-band--why {
-    align-items: start;
   }
   .history-band > .app-panel {
     position: sticky;
@@ -2115,14 +2255,28 @@ a.choice.choice-drank .choice-mark {
 
   .features,
   .position,
+  .compare,
   .trust,
   .choices,
   .risk {
     padding: 64px 20px;
   }
 
-  .history .history-header {
-    margin-bottom: 20px;
+  .compare-header {
+    margin-bottom: 28px;
+  }
+
+  .compare-table th,
+  .compare-table td {
+    padding: 12px 10px;
+  }
+
+  .compare-table tbody th {
+    font-size: 12px;
+  }
+
+  .history .history-intro {
+    margin-bottom: 32px;
   }
 
   .history-band {
@@ -2130,7 +2284,12 @@ a.choice.choice-drank .choice-mark {
   }
 
   .history-band + .history-band {
-    margin-top: 48px;
+    margin-top: 40px;
+  }
+
+  .history-close {
+    margin-top: 40px;
+    font-size: 16px;
   }
 
   .app-panel {
