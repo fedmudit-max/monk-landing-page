@@ -2251,6 +2251,12 @@ a.choice.choice-drank .choice-mark {
     padding: 24px 0 16px;
   }
 
+  /* Streak list is HTML, so a fixed screen height clips Best Streak. Grow only this phone. */
+  .progress-device:nth-child(1) .progress-screen {
+    height: auto;
+    min-height: min(433px, 65vh);
+  }
+
   /* Journey: keep absolute flush — do not inherit mobile screen padding/grey */
   .progress-device .progress-screen--shot {
     height: min(433px, 65vh);
