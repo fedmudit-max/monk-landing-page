@@ -1502,6 +1502,25 @@ a.choice.choice-drank .choice-mark {
 }
 
 .position { background: var(--grey-bg); }
+
+.history {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(160deg, var(--green-deep) 0%, #1a7a30 60%, #1e9e3e 100%);
+}
+
+.history::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 50%, rgba(30, 158, 62, 0.3) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.history .position-inner {
+  position: relative;
+  z-index: 1;
+}
 .why { margin-top: 64px; }
 .why .section-sub { margin-bottom: 24px; }
 
@@ -1513,11 +1532,12 @@ a.choice.choice-drank .choice-mark {
 }
 
 .history .history-intro .section-title {
-  color: var(--dark);
+  color: #fff;
 }
 
 .history .history-intro .section-sub {
   max-width: 40rem;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .history-band {
@@ -1542,7 +1562,7 @@ a.choice.choice-drank .choice-mark {
   font-weight: 800;
   letter-spacing: -0.4px;
   line-height: 1.2;
-  color: var(--green-deep);
+  color: #fff;
 }
 
 .history-band-lead {
@@ -1550,14 +1570,14 @@ a.choice.choice-drank .choice-mark {
   font-size: 18px;
   font-weight: 700;
   line-height: 1.35;
-  color: var(--dark);
+  color: #fff;
 }
 
 .history-band-body {
   margin: 0;
   font-size: 15px;
   line-height: 1.65;
-  color: var(--grey-text);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .history-band > .app-panel {
@@ -1696,165 +1716,95 @@ a.choice.choice-drank .choice-mark {
   justify-content: flex-start;
 }
 
-/* —— Section 5: drinking risk (mobile: phone above steps; desktop: side-by-side) —— */
-.risk {
-  background: #fff;
+.faq {
+  background: #e2f5e5; /* same fill as achieved Journey milestones */
   padding: 96px 24px;
-  overflow-x: clip;
 }
 
-.risk-inner {
-  max-width: var(--max);
+.faq-inner {
+  max-width: 760px;
   margin: 0 auto;
+}
+
+.faq .section-title {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.faq-list {
   display: grid;
-  gap: 36px;
-  justify-items: center;
-  text-align: center;
-  grid-template-areas:
-    "title"
-    "phone"
-    "copy";
+  gap: 12px;
 }
 
-.risk-title { grid-area: title; }
-.risk-phone { grid-area: phone; }
-.risk-copy { grid-area: copy; }
-
-.risk-copy {
-  max-width: 36rem;
-  width: 100%;
-  text-align: left;
+.faq-item {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
 }
 
-.risk-title {
-  font-size: clamp(28px, 4vw, 42px);
-  font-weight: 900;
-  letter-spacing: -1px;
-  line-height: 1.12;
-  color: var(--green-deep);
-  margin: 0;
-  max-width: 20em;
-  text-align: center;
-}
-
-.risk-lead {
-  font-size: 20px;
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 20px;
+  font-size: 17px;
   font-weight: 700;
   line-height: 1.35;
   color: var(--dark);
-  margin: 0 0 14px;
-}
-
-.risk-body {
-  font-size: 16px;
-  line-height: 1.65;
-  color: var(--grey-text);
-  margin: 0 0 28px;
-}
-
-.risk-steps-title {
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
-  color: var(--green-brand);
-  margin: 0 0 16px;
-}
-
-.risk-steps {
+  cursor: pointer;
   list-style: none;
-  margin: 0 0 28px;
-  padding: 0;
-  display: grid;
-  gap: 16px;
 }
 
-.risk-steps > li {
-  display: grid;
-  grid-template-columns: 36px 1fr;
-  gap: 14px;
-  align-items: start;
+.faq-item summary::-webkit-details-marker {
+  display: none;
 }
 
-.risk-step-num {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: var(--green-light);
+.faq-item summary::after {
+  content: "";
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  margin-top: -4px;
+  border-right: 2px solid var(--green-brand);
+  border-bottom: 2px solid var(--green-brand);
+  transform: rotate(45deg);
+}
+
+.faq-item[open] summary::after {
+  margin-top: 4px;
+  transform: rotate(-135deg);
+}
+
+.faq-item[open] summary {
   color: var(--green-deep);
-  font-size: 14px;
-  font-weight: 800;
 }
 
-.risk-steps strong {
-  display: block;
-  font-size: 16px;
-  font-weight: 800;
-  color: var(--dark);
-  margin-bottom: 4px;
+.faq-answer {
+  padding: 0 20px 18px;
+  color: var(--body);
+  font-size: 15px;
+  line-height: 1.65;
 }
 
-.risk-steps p {
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.55;
-  color: var(--grey-text);
+.faq-answer p {
+  margin: 0 0 12px;
 }
 
-.risk-copy .btn-brand {
-  margin-bottom: 14px;
+.faq-answer p:last-child,
+.faq-answer ul:last-child {
+  margin-bottom: 0;
 }
 
-.risk-disclaimer {
-  margin: 0;
-  max-width: 34em;
-  font-size: 13px;
-  line-height: 1.55;
-  color: var(--grey-text);
+.faq-answer ul {
+  margin: 0 0 12px;
+  padding-left: 1.2em;
 }
 
-.risk-phone {
-  margin: 0;
-  width: min(100%, 300px);
-  max-width: 100%;
-  justify-self: center;
-  padding: 0;
-  border: 0;
-  background: none;
-  box-sizing: border-box;
-  perspective: none;
-  transform-style: flat;
-}
-
-.risk-phone .progress-device-frame {
-  transform: none;
-  transform-style: flat;
-  will-change: auto;
-}
-
-.risk-phone .progress-screen {
-  height: auto;
-  min-height: 0;
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-  align-items: stretch;
-  justify-content: flex-start;
-  transform: none;
-}
-
-.risk-phone .progress-screen img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-  height: auto;
-  object-fit: contain;
-  object-position: top center;
-  border-radius: 0;
+.faq-answer li + li {
+  margin-top: 6px;
 }
 
 .cta-section {
@@ -1963,30 +1913,6 @@ a.choice.choice-drank .choice-mark {
   }
   .choice { width: auto; }
   .shot-row { grid-template-columns: repeat(3, 1fr); }
-  .risk-inner {
-    grid-template-columns: 1.05fr 0.95fr;
-    grid-template-areas:
-      "title phone"
-      "copy phone";
-    gap: 28px 56px;
-    align-items: center;
-    justify-items: stretch;
-    text-align: left;
-  }
-  .risk-title {
-    text-align: left;
-    margin: 0;
-    justify-self: start;
-  }
-  .risk-copy {
-    max-width: none;
-    justify-self: stretch;
-  }
-  .risk-phone {
-    width: min(100%, 280px);
-    justify-self: end;
-    align-self: center;
-  }
   .progress-phones {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     /* phones-ref: clear gutters; side padding absorbs 3D tilt bleed */
@@ -2143,8 +2069,17 @@ a.choice.choice-drank .choice-mark {
   .features,
   .position,
   .choices,
-  .risk {
+  .faq {
     padding: 64px 20px;
+  }
+
+  .faq-item summary {
+    font-size: 16px;
+    padding: 16px;
+  }
+
+  .faq-answer {
+    padding: 0 16px 16px;
   }
 
 
@@ -2172,14 +2107,6 @@ a.choice.choice-drank .choice-mark {
 
   .best-scores-list {
     gap: 16px;
-  }
-
-  .risk-inner {
-    gap: 28px;
-  }
-
-  .risk-phone {
-    width: min(100%, 260px);
   }
 
   .progress {
